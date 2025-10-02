@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Create a remove button
         const removeBtn = document.createElement('button');
         removeBtn.textContent = "Remove";
-        removeBtn.className = 'remove-btn';
+        removeBtn.classList.add('remove-btn'); 
 
         // Assign onclick event to remove the task
         removeBtn.onclick = function () {
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Append button to li, then li to ul
         li.appendChild(removeBtn);
-        
+
         taskList.appendChild(li);
 
         // Clear the input field
@@ -50,5 +50,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-
+    // Optional: invoke addTask on DOMContentLoaded if required
+    // addTask();
 });
